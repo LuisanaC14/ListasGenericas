@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestionCafeteriaWF
 {
-    public class Cafeteria
+    public class Cafeteria // esto hizo el pedro 
     {
         public string Cliente { get; set; }
         public string Producto { get; set; }
