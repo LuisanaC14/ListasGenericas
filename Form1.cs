@@ -9,7 +9,21 @@ namespace GestionCafeteriaWF
 
         private void btnAgregarPedido_Click(object sender, EventArgs e)
         {
+        string cliente = txtCliente.Text;
+            string producto = txtProducto.Text;
+            int cantidad;
 
+            if (string.IsNullOrWhiteSpace(cliente) || string.IsNullOrWhiteSpace(producto) || !int.TryParse(txtCantidad.Text, out cantidad))
+            {
+                MessageBox.Show("Ingrese datos válidos.");
+                return;
+            }
+
+            Cafeteria nuevoPedido = new Cafeteria(cliente, producto, cantidad);
+            pedidos.Add(nuevoPedido);
+            ActualizarListaPedidos();
+            LimpiarCampos();
+        
         }
 
         private void btnProcesarPedido_Click(object sender, EventArgs e)
