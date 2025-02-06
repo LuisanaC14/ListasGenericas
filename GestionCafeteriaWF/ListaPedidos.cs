@@ -15,7 +15,7 @@ namespace GestionCafeteriaWF
             pedidos = new List<Cafeteria>();
         }
 
-        public void AgregarPedido(Cafeteria pedido)
+        public void AgregarPedido(Cafeteria pedido)// MODIFICADO
         {
             pedidos.Add(pedido);
         }
